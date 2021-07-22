@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <meta charset="utf-8">
+    <meta http-equiv='content-language' content='en-gb'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Character Counter</title>
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+	<p class="headerm">
+
+<a href="##" rel="home">Essay Writing Tool</a>
+</p>
+
+	<div>
+		<textarea cols="50" rows="10" id="words" placeholder="Enter your text here"></textarea>
+		<br>
+
+		<p id="showdata"> </p>
+		<br>
+		<p id="showwords"> </p>
+		<br>
+		<button onclick="countwords()" style="
+			padding: 10px 10px;
+			background-color: #1E90FF;
+			color:white;
+			border-radius: 10px;
+			border:2px solid #0984e3;
+			font-size: 1.2rem;
+			outline: none;
+			">Count Words and Character</button>
+	</div>
+
+	<script>
+	const countwords = () => {
+	  let noc = document.getElementById('words').value.length;
+	  let now = document.getElementById('words').value;
+	  let x  = now.split(" ").length;
+	  // now = now.match(/\w+/g);
+	  // now = now.length;
+	  // alert(noc);
+	  document.getElementById("showdata").innerHTML = "Number of Characters = " + noc;
+	  document.getElementById("showwords").innerHTML = "Number of words = " + x;
+	}
+
+	</script>
+
+
+
+
+</body>
+</html>
